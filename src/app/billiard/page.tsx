@@ -14,7 +14,7 @@ export default function BilliardPage() {
     <>
       <section className="relative flex min-h-[60vh] items-end overflow-hidden">
         <Image
-          src="/images/ambiance/billiard-hall.jpg"
+          src="/images/ambiance/billiard-rack.jpg"
           alt="Meja billiard D'Ajiks"
           fill
           priority

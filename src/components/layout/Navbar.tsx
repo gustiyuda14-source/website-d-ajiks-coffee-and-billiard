@@ -14,12 +14,12 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-gold/15 bg-forest-black/90 backdrop-blur">
       <div className="container-page flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="relative h-11 w-11 overflow-hidden rounded-full bg-near-black">
+          <span className="relative h-12 w-16 shrink-0">
             <Image
-              src="/brand/logo-gold-icon.jpg"
+              src="/brand/logo-gold-mark.png"
               alt="Logo D'Ajiks"
               fill
-              className="object-cover object-top scale-[1.7]"
+              className="object-contain"
             />
           </span>
           <span className="flex flex-col leading-none">
