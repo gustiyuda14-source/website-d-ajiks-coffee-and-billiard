@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, MapPin, MessageCircle, Music2 } from "lucide-react";
+import { Bike, Instagram, MapPin, MessageCircle, Music2 } from "lucide-react";
 import { business, navLinks, waLink } from "@/lib/constants";
 
 export function Footer() {
@@ -59,6 +59,14 @@ export function Footer() {
             className="flex items-center gap-2 font-body text-sm text-ivory/70 hover:text-gold"
           >
             <Music2 size={16} /> TikTok
+          </a>
+          <a
+            href={business.social.grabfood}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 font-body text-sm text-ivory/70 hover:text-gold"
+          >
+            <Bike size={16} /> GrabFood
           </a>
           <span className="flex items-center gap-2 font-body text-sm text-ivory/70">
             <MapPin size={16} /> {business.city}, Indonesia

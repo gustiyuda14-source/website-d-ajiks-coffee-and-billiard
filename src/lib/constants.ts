@@ -9,6 +9,7 @@ export const business = {
   social: {
     instagram: "https://www.instagram.com/d.ajikscoffeenbiliard",
     tiktok: "https://www.tiktok.com/@d_ajikscoffeenbil",
+    grabfood: "https://r.grab.com/g/6-20260706_001619_BFC670B606144A3493862E375F8823E5_MEXMPS-6-C7NAELLKKEDJWA",
   },
   hours: [
     { label: "Setiap Hari", time: "10.00 – 02.00" },

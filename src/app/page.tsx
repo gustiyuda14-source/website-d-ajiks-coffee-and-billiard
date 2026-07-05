@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { AmbianceGallery } from "@/components/sections/AmbianceGallery";
 import { MenuHighlight } from "@/components/sections/MenuHighlight";
+import { GrabFoodCta } from "@/components/sections/GrabFoodCta";
 import { CommunitySection } from "@/components/sections/CommunitySection";
 import { ValueProps } from "@/components/sections/ValueProps";
 import { BilliardPricing } from "@/components/sections/BilliardPricing";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <AmbianceGallery />
       <MenuHighlight />
+      <GrabFoodCta />
       <CommunitySection />
       <ValueProps />
       <BilliardPricing />
