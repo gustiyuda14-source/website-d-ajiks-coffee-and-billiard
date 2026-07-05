@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/Button";
 
 const shots = [
   { src: "/images/ambiance/dining-area.jpg", alt: "Area dining kayu D'Ajiks", span: "md:col-span-2 md:row-span-2" },
+  { src: "/images/ambiance/suasana-dajiks.jpg", alt: "Suasana nongkrong D'Ajiks", span: "" },
   { src: "/images/ambiance/crew-brewing.jpg", alt: "Crew D'Ajiks meracik kopi", span: "" },
   { src: "/images/ambiance/billiard-rack.jpg", alt: "Rak bola billiard", span: "" },
   { src: "/images/ambiance/billiard-detail.jpg", alt: "Detail bola billiard D'Ajiks", span: "" },
+  { src: "/images/ambiance/billiard-play-action.jpg", alt: "Semeton asik bermain billiard di D'Ajiks", span: "" },
+  { src: "/images/ambiance/billiard-play-friends.jpg", alt: "Sekelompok teman bermain billiard bersama", span: "" },
   { src: "/images/products/coffee-cups-branding.jpg", alt: "Kopi D'Ajiks dengan branding emas", span: "" },
 ];
 
@@ -20,7 +23,7 @@ export function AmbianceGallery() {
           description="Kayu hangat, cahaya temaram, dan meja billiard yang selalu siap — inilah wajah asli D'Ajiks, bukan sekadar foto promosi."
         />
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {shots.map((shot) => (
             <div
               key={shot.src}

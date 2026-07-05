@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative flex min-h-[92vh] items-center overflow-hidden">
       <Image
         src="/images/ambiance/hero-bar-counter.jpg"
-        alt="Bar counter D'Ajiks Coffee & Billiard"
+        alt="Meja bar dan mesin kopi D'Ajiks Coffee & Billiard"
         fill
         priority
         className="object-cover"
