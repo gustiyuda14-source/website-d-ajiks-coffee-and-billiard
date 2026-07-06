@@ -53,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className={`${cinzel.variable} ${jost.variable}`}>
-      <body className="font-body">
+      <body className="bg-forest-deep font-body text-ivory antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

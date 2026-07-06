@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageHeader } from "@/components/ui/PageHeader";
 import { MenuTabs } from "@/components/menu/MenuTabs";
 
 export const metadata: Metadata = {
@@ -9,15 +9,14 @@ export const metadata: Metadata = {
 
 export default function MenuPage() {
   return (
-    <section className="py-24">
-      <div className="container-page flex flex-col gap-14">
-        <SectionHeading
-          align="center"
-          eyebrow="Menu Lengkap"
-          title="Setiap Cangkir, Setiap Piring"
-          description="Semua harga dalam Rupiah. Menu dapat berubah sewaktu-waktu mengikuti ketersediaan bahan."
-          className="mx-auto"
-        />
+    <section className="pb-28">
+      <PageHeader
+        eyebrow="Menu Lengkap"
+        title="Setiap Cangkir,"
+        titleAccent="Setiap Piring"
+        description="Semua harga dalam Rupiah. Menu dapat berubah sewaktu-waktu mengikuti ketersediaan bahan."
+      />
+      <div className="container-page pt-12">
         <MenuTabs />
       </div>
     </section>

@@ -11,12 +11,14 @@ type ButtonProps = {
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-body text-sm tracking-wide uppercase transition-colors duration-200";
+  "group inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-body text-sm font-medium tracking-[0.12em] uppercase transition-all duration-300 ease-out-expo";
 
 const variants = {
-  solid: "bg-gold text-near-black hover:bg-gold-light",
-  outline: "border border-gold/60 text-ivory hover:border-gold hover:bg-gold/10",
-  ghost: "text-ivory/80 hover:text-gold",
+  solid:
+    "btn-sheen bg-gold-sheen text-near-black shadow-gold-glow hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0",
+  outline:
+    "border border-gold/50 text-ivory backdrop-blur-sm hover:-translate-y-0.5 hover:border-gold hover:bg-gold/10 hover:text-gold-light active:translate-y-0",
+  ghost: "px-0 py-0 text-ivory/80 hover:text-gold",
 };
 
 export function Button({

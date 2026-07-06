@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Clock, Instagram, MapPin, MessageCircle, Music2 } from "lucide-react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { business, waLink } from "@/lib/constants";
 
@@ -9,62 +10,81 @@ export const metadata: Metadata = {
   description: "Hubungi D'Ajiks Coffee & Billiard via WhatsApp, Instagram, atau TikTok.",
 };
 
+const channels = [
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: business.whatsapp.displayNumber,
+    href: waLink("Halo D'Ajiks, saya ingin bertanya."),
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@d.ajikscoffeenbiliard",
+    href: business.social.instagram,
+  },
+  {
+    icon: Music2,
+    label: "TikTok",
+    value: "@d_ajikscoffeenbil",
+    href: business.social.tiktok,
+  },
+];
+
 export default function ContactPage() {
   return (
-    <section className="py-24">
-      <div className="container-page flex flex-col items-center gap-12 text-center">
-        <SectionHeading
-          align="center"
-          eyebrow="Hubungi Kami"
-          title="Sampai Jumpa di D'Ajiks"
-          className="mx-auto"
-        />
+    <section className="pb-28">
+      <PageHeader
+        eyebrow="Hubungi Kami"
+        title="Sampai Jumpa di"
+        titleAccent="D'Ajiks"
+      />
 
-        <div className="grid w-full max-w-xl gap-4">
-          <a
-            href={waLink("Halo D'Ajiks, saya ingin bertanya.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 rounded-xl border border-gold/20 bg-forest-green/20 px-6 py-4 font-body text-ivory/90 hover:border-gold/60"
-          >
-            <MessageCircle size={18} className="text-gold" />
-            {business.whatsapp.displayNumber}
-          </a>
-          <a
-            href={business.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 rounded-xl border border-gold/20 bg-forest-green/20 px-6 py-4 font-body text-ivory/90 hover:border-gold/60"
-          >
-            <Instagram size={18} className="text-gold" />
-            @d.ajikscoffeenbiliard
-          </a>
-          <a
-            href={business.social.tiktok}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 rounded-xl border border-gold/20 bg-forest-green/20 px-6 py-4 font-body text-ivory/90 hover:border-gold/60"
-          >
-            <Music2 size={18} className="text-gold" />
-            @d_ajikscoffeenbil
-          </a>
-          <div className="flex items-center justify-center gap-3 rounded-xl border border-gold/10 px-6 py-4 font-body text-ivory/70">
-            <MapPin size={18} className="text-gold" />
-            {business.city}, Sulawesi Tenggara
-          </div>
-          <div className="flex items-center justify-center gap-3 rounded-xl border border-gold/10 px-6 py-4 font-body text-ivory/70">
-            <Clock size={18} className="text-gold" />
-            {business.hours[0].time} Setiap Hari
-          </div>
+      <div className="container-page flex flex-col items-center gap-12 pt-12">
+        <div className="grid w-full max-w-3xl gap-4 sm:grid-cols-3">
+          {channels.map(({ icon: Icon, label, value, href }, i) => (
+            <Reveal key={label} delay={i * 100} className="h-full">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-luxe flex h-full flex-col items-center gap-3 p-8 text-center"
+              >
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/30 bg-gold/5 text-gold">
+                  <Icon size={20} />
+                </span>
+                <span className="eyebrow">{label}</span>
+                <span className="break-all font-body text-sm text-ivory/80">
+                  {value}
+                </span>
+              </a>
+            </Reveal>
+          ))}
         </div>
 
-        <Button
-          href={waLink("Halo D'Ajiks, saya ingin reservasi.")}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Chat Sekarang
-        </Button>
+        <Reveal className="w-full max-w-3xl">
+          <div className="flex flex-col items-center justify-center gap-4 rounded-2xl border border-gold/15 bg-forest-green/10 px-8 py-6 sm:flex-row sm:gap-10">
+            <span className="flex items-center gap-3 font-body text-sm text-ivory/70">
+              <MapPin size={18} className="text-gold" />
+              {business.city}, Sulawesi Tenggara
+            </span>
+            <span className="hidden h-6 w-px bg-gold/20 sm:block" aria-hidden />
+            <span className="flex items-center gap-3 font-body text-sm text-ivory/70">
+              <Clock size={18} className="text-gold" />
+              {business.hours[0].time} Setiap Hari
+            </span>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <Button
+            href={waLink("Halo D'Ajiks, saya ingin reservasi.")}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat Sekarang
+          </Button>
+        </Reveal>
       </div>
     </section>
   );
