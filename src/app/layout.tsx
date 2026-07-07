@@ -21,11 +21,23 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dajiks-coffee-and-billiard.vercel.app"),
+  // Must match the real production alias — Vercel's "Latest Production URL" for
+  // this project, confirmed via `vercel project ls`. A wrong domain here means
+  // og:image resolves to a URL that 404s, so link previews show no image at all.
+  metadataBase: new URL("https://dajiks.vercel.app"),
   title: "D'Ajiks Coffee & Billiard | Coffee Shop & Billiard Lounge di Kendari",
   description:
     "D'Ajiks Coffee & Billiard — coffee shop dan billiard lounge premium di Kendari. Nikmati signature drinks, main course, dan meja billiard dengan suasana elegan.",
   openGraph: {
+    title: "D'Ajiks Coffee & Billiard",
+    description:
+      "Coffee shop & billiard lounge premium di Kendari. Reservasi via WhatsApp.",
+    images: ["/images/ambiance/hero-bar-counter.jpg"],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "D'Ajiks Coffee & Billiard",
     description:
       "Coffee shop & billiard lounge premium di Kendari. Reservasi via WhatsApp.",

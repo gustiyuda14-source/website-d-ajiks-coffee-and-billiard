@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Gallery — D'Ajiks Coffee & Billiard",
   description: "Galeri suasana, meja billiard, dan sudut-sudut D'Ajiks Coffee & Billiard di Kendari.",
-};
+  image: "/images/ambiance/dining-area.jpg",
+  path: "/gallery",
+});
 
 const ambiance = [
   { src: "/images/ambiance/hero-bar-counter.jpg", alt: "Bar counter D'Ajiks", label: "Bar Counter" },

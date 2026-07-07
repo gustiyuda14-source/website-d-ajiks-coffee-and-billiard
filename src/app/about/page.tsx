@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About — D'Ajiks Coffee & Billiard",
   description: "Kisah di balik D'Ajiks Coffee & Billiard dan arti Semeton D'Ajiks.",
-};
+  image: "/images/ambiance/barista.jpg",
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import { Clock, Instagram, MapPin, MessageCircle, Music2, Navigation } from "lucide-react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { LocationMap } from "@/components/ui/LocationMap";
 import { business, waLink } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact — D'Ajiks Coffee & Billiard",
   description: "Hubungi D'Ajiks Coffee & Billiard via WhatsApp, Instagram, atau TikTok.",
-};
+  image: "/images/ambiance/crew-brewing.jpg",
+  path: "/contact",
+});
 
 const channels = [
   {

@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { PriceCard } from "@/components/ui/PriceCard";
 import { billiardPricing, waLink } from "@/lib/constants";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Billiard — D'Ajiks Coffee & Billiard",
   description: "Meja billiard standar turnamen di D'Ajiks Coffee & Billiard, Kendari. Tarif Rp25.000/jam siang dan Rp40.000/jam malam.",
-};
+  image: "/images/ambiance/billiard-play-action.jpg",
+  path: "/billiard",
+});
 
 const notes = [
   "Reservasi meja via WhatsApp untuk memastikan ketersediaan",
