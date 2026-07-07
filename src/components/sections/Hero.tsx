@@ -19,7 +19,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="animate-kenburns object-cover"
+          className="animate-kenburns object-cover blur-md scale-110"
         />
       </div>
 
