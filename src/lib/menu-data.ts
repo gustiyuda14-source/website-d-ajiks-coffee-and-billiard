@@ -53,7 +53,7 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Americano (Hot/Cold)",
         price: "23.000 / 25.000",
-        image: "/images/menu-items/americano.jpg",
+        image: "/images/menu-items/americano-splash.jpg",
       },
       { name: "Americano Honeyberry", price: 26000 },
       { name: "Americano Segaraningberry", price: 26000 },
@@ -64,8 +64,18 @@ export const menuCategories: MenuCategory[] = [
     slug: "ice-coffee",
     title: "Ice Coffee",
     items: [
-      { name: "Aren", price: 24000 },
-      { name: "Pandan", price: 26000 },
+      {
+        name: "Aren",
+        price: 24000,
+        image: "/images/menu-items/ice-coffee-aren.jpg",
+        tag: "Best Seller",
+      },
+      {
+        name: "Pandan",
+        price: 26000,
+        image: "/images/menu-items/ice-coffee-pandan.jpg",
+        tag: "Best Seller",
+      },
       { name: "Caramel", price: 26000 },
       {
         name: "Vanilla Latte",
@@ -123,8 +133,18 @@ export const menuCategories: MenuCategory[] = [
         price: 35000,
         image: "/images/menu-items/bandeng-crispy.jpg",
       },
-      { name: "Nasi Jinggo D'Ajiks", price: 25000 },
-      { name: "Ayam Betutu (Kampung)", price: 45000 },
+      {
+        name: "Nasi Jinggo D'Ajiks",
+        price: 25000,
+        image: "/images/menu-items/nasi-jinggo.jpg",
+        tag: "Best Seller",
+      },
+      {
+        name: "Ayam Betutu (Kampung)",
+        price: 45000,
+        image: "/images/menu-items/ayam-betutu.jpg",
+        tag: "Best Seller",
+      },
       { name: "Ayam Betutu (Kota)", price: 30000 },
     ],
   },
@@ -160,11 +180,31 @@ export const menuCategories: MenuCategory[] = [
     slug: "produk-literan",
     title: "Sharing Seliter",
     items: [
-      { name: "Coklat", price: "Literan" },
-      { name: "4 Sharing", price: "Literan" },
-      { name: "Matcha", price: "Literan" },
-      { name: "Pandan", price: "Literan" },
-      { name: "Aren", price: "Literan" },
+      {
+        name: "Coklat",
+        price: "Literan",
+        image: "/images/menu-items/literan-coklat.jpg",
+      },
+      {
+        name: "4 Sharing",
+        price: "Literan",
+        image: "/images/menu-items/literan-4sharing.jpg",
+      },
+      {
+        name: "Matcha",
+        price: "Literan",
+        image: "/images/menu-items/literan-matcha.jpg",
+      },
+      {
+        name: "Pandan",
+        price: "Literan",
+        image: "/images/menu-items/literan-pandan.jpg",
+      },
+      {
+        name: "Aren",
+        price: "Literan",
+        image: "/images/menu-items/literan-aren.jpg",
+      },
     ],
   },
 ];

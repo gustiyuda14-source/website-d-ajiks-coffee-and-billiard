@@ -12,6 +12,7 @@ const shots = [
   { src: "/images/ambiance/billiard-detail.jpg", alt: "Detail bola billiard D'Ajiks", label: "Detail", span: "" },
   { src: "/images/ambiance/billiard-play-action.jpg", alt: "Semeton asik bermain billiard di D'Ajiks", label: "Match Night", span: "" },
   { src: "/images/ambiance/billiard-play-friends.jpg", alt: "Sekelompok teman bermain billiard bersama", label: "Semeton", span: "" },
+  { src: "/images/ambiance/suasana-nongki.jpg", alt: "Nongkrong santai di gazebo D'Ajiks malam hari", label: "Nongki", span: "" },
   { src: "/images/products/coffee-cups-branding.jpg", alt: "Kopi D'Ajiks dengan branding emas", label: "Signature Cup", span: "" },
 ];
 

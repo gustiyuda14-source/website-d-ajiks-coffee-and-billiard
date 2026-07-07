@@ -15,6 +15,9 @@ const ambiance = [
   { src: "/images/ambiance/dining-area.jpg", alt: "Area dining D'Ajiks", label: "Dining Area" },
   { src: "/images/ambiance/billiard-rack.jpg", alt: "Rak bola billiard D'Ajiks", label: "Billiard" },
   { src: "/images/ambiance/billiard-detail.jpg", alt: "Detail bola billiard D'Ajiks", label: "Detail" },
+  { src: "/images/ambiance/suasana-nongki.jpg", alt: "Nongkrong santai di gazebo D'Ajiks malam hari", label: "Nongki" },
+  { src: "/images/ambiance/suasana-outdoor.jpg", alt: "Area outdoor D'Ajiks di siang hari", label: "Outdoor" },
+  { src: "/images/ambiance/barista.jpg", alt: "Barista D'Ajiks menuang kopi", label: "Barista" },
   { src: "/images/products/coffee-cup-branding.jpg", alt: "Kopi D'Ajiks", label: "Coffee" },
   { src: "/images/products/produk-literan.jpg", alt: "Produk sharing seliter D'Ajiks", label: "Sharing Seliter" },
 ];
