@@ -9,7 +9,6 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Contact — D'Ajiks Coffee & Billiard",
   description: "Hubungi D'Ajiks Coffee & Billiard via WhatsApp, Instagram, atau TikTok.",
-  image: "/images/ambiance/crew-brewing.jpg",
   path: "/contact",
 });
 

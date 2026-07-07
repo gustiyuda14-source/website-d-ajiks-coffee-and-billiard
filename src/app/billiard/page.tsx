@@ -9,7 +9,6 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Billiard — D'Ajiks Coffee & Billiard",
   description: "Meja billiard standar turnamen di D'Ajiks Coffee & Billiard, Kendari. Tarif Rp25.000/jam siang dan Rp40.000/jam malam.",
-  image: "/images/ambiance/billiard-play-action.jpg",
   path: "/billiard",
 });
 

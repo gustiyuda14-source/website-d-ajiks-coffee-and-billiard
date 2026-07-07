@@ -3,13 +3,25 @@ import type { Metadata } from "next";
 type PageMetadataInput = {
   title: string;
   description: string;
-  /** Public path to a real venue/product photo — shown in the share preview card. */
-  image: string;
   /** Route path, e.g. "/menu" — used for canonical + og:url. */
   path: string;
 };
 
-export function pageMetadata({ title, description, image, path }: PageMetadataInput): Metadata {
+/**
+ * Every page points at the same generated brand card (app/opengraph-image.tsx)
+ * — one elegant logo+tagline card, only the surrounding title/description text
+ * changes per page (same pattern as the Epic Moment reference site).
+ *
+ * This has to be explicit: Next.js only auto-attaches the opengraph-image file
+ * convention to a route when that route's own `metadata` doesn't define its
+ * own `openGraph` object at all. Since every page here sets openGraph (for
+ * title/description/url), that replaces the parent's openGraph wholesale
+ * instead of merging — so without `images` here, child routes silently lose
+ * the picture entirely (confirmed: worked on "/", missing on every sub-page).
+ */
+const OG_IMAGE = "/opengraph-image";
+
+export function pageMetadata({ title, description, path }: PageMetadataInput): Metadata {
   return {
     title,
     description,
@@ -18,7 +30,7 @@ export function pageMetadata({ title, description, image, path }: PageMetadataIn
       title,
       description,
       url: path,
-      images: [image],
+      images: [OG_IMAGE],
       locale: "id_ID",
       type: "website",
     },
@@ -26,7 +38,7 @@ export function pageMetadata({ title, description, image, path }: PageMetadataIn
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [OG_IMAGE],
     },
   };
 }

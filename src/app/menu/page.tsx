@@ -5,7 +5,6 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Menu — D'Ajiks Coffee & Billiard",
   description: "Daftar lengkap menu kopi, signature drinks, main course, snack, dan produk literan D'Ajiks Coffee & Billiard.",
-  image: "/images/menu-items/kintamani-whisper.jpg",
   path: "/menu",
 });
 

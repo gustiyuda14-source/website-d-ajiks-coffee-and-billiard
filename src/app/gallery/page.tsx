@@ -6,7 +6,6 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Gallery — D'Ajiks Coffee & Billiard",
   description: "Galeri suasana, meja billiard, dan sudut-sudut D'Ajiks Coffee & Billiard di Kendari.",
-  image: "/images/ambiance/dining-area.jpg",
   path: "/gallery",
 });
 

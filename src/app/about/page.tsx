@@ -6,7 +6,6 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "About — D'Ajiks Coffee & Billiard",
   description: "Kisah di balik D'Ajiks Coffee & Billiard dan arti Semeton D'Ajiks.",
-  image: "/images/ambiance/barista.jpg",
   path: "/about",
 });
 
