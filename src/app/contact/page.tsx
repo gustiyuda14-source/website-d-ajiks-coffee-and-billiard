@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Clock, Instagram, MapPin, MessageCircle, Music2 } from "lucide-react";
+import { Clock, Instagram, MapPin, MessageCircle, Music2, Navigation } from "lucide-react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { LocationMap } from "@/components/ui/LocationMap";
 import { business, waLink } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -63,26 +64,42 @@ export default function ContactPage() {
         </div>
 
         <Reveal className="w-full max-w-3xl">
-          <div className="flex flex-col items-center justify-center gap-4 rounded-2xl border border-gold/15 bg-forest-green/10 px-8 py-6 sm:flex-row sm:gap-10">
+          <div className="flex flex-col items-center justify-center gap-4 rounded-2xl border border-gold/15 bg-forest-green/10 px-8 py-6 text-center sm:flex-row sm:gap-10 sm:text-left">
             <span className="flex items-center gap-3 font-body text-sm text-ivory/70">
-              <MapPin size={18} className="text-gold" />
-              {business.city}, Sulawesi Tenggara
+              <MapPin size={18} className="shrink-0 text-gold" />
+              {business.address}
             </span>
             <span className="hidden h-6 w-px bg-gold/20 sm:block" aria-hidden />
             <span className="flex items-center gap-3 font-body text-sm text-ivory/70">
-              <Clock size={18} className="text-gold" />
+              <Clock size={18} className="shrink-0 text-gold" />
               {business.hours[0].time} Setiap Hari
             </span>
           </div>
         </Reveal>
 
-        <Reveal>
+        <Reveal className="w-full max-w-3xl">
+          <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-gold/15 shadow-card">
+            <LocationMap />
+          </div>
+        </Reveal>
+
+        <Reveal className="flex flex-wrap justify-center gap-4">
           <Button
             href={waLink("Halo D'Ajiks, saya ingin reservasi.")}
             target="_blank"
             rel="noopener noreferrer"
           >
             Chat Sekarang
+          </Button>
+          <Button
+            href={business.location.directionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outline"
+            className="group"
+          >
+            <Navigation size={16} className="transition-transform duration-300 group-hover:-translate-y-0.5" />
+            Petunjuk Arah
           </Button>
         </Reveal>
       </div>

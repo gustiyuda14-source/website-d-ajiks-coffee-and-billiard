@@ -84,9 +84,14 @@ export function Footer() {
             <MessageCircle size={16} className="text-gold" />
             {business.whatsapp.displayNumber}
           </a>
-          <span className="flex items-center gap-3 font-body text-sm text-ivory/65">
-            <MapPin size={16} className="text-gold" /> {business.city}, Sulawesi Tenggara
-          </span>
+          <a
+            href={business.location.directionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-3 font-body text-sm text-ivory/65 transition-colors hover:text-gold"
+          >
+            <MapPin size={16} className="mt-0.5 shrink-0 text-gold" /> {business.address}
+          </a>
           <span className="flex items-center gap-3 font-body text-sm text-ivory/65">
             <Clock size={16} className="text-gold" /> {business.hours[0].time} · Setiap Hari
           </span>

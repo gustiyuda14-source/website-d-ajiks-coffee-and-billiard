@@ -97,6 +97,7 @@ Urutan section Home mengikuti prioritas jenis konten dari analisis sosmed (Ambia
 | WhatsApp Business | +62 851-2196-0870 (`wa.me/6285121960870`) |
 | Instagram | [@d.ajikscoffeenbiliard](https://www.instagram.com/d.ajikscoffeenbiliard) |
 | TikTok | [@d_ajikscoffeenbil](https://www.tiktok.com/@d_ajikscoffeenbil) |
+| Alamat | Jl. Brigadir Jenderal Katamso, Lepo-Lepo, Kendari, Sulawesi Tenggara 90116 ([Google Maps](https://maps.app.goo.gl/CyZqHQoejrfvWH8J6)) |
 
 ## 6. Pembagian Tugas — Claude Code & Gemini Antigravity
 
@@ -163,7 +164,7 @@ Dua agen bekerja di proyek yang sama dengan batas tanggung jawab yang tegas, sup
 - [x] Lightbox foto menu (klik kartu → foto penuh, tutup via backdrop/X/ESC), marquee brand ticker di Home, emblem Grab asli di section GrabFood CTA (`public/images/partners/`) (Claude Code)
 - [x] Batch foto ke-2: suasana nongki (HEIC→JPG) + outdoor + barista ke ambiance/Gallery, best seller Aren/Pandan/Betutu/Nasi Jinggo bertag, americano splash baru, 5 botol literan → Sharing Seliter full photo-card (Claude Code)
 - [x] Hardening security header (`next.config.mjs`): CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, HSTS, `poweredByHeader: false` — diverifikasi zero console/CSP error di semua halaman + interaktivitas (lightbox, ESC, WA button) tetap jalan (Claude Code)
-- [ ] Lengkapi alamat & embed peta di halaman Contact — alamat pasti belum tersedia (Claude Code)
+- [x] Alamat presisi (Jl. Brigadir Jenderal Katamso, Lepo-Lepo, Kendari 90116) + embed Google Maps di section Home (LocationCta) dan halaman Contact, tombol "Buka di Google Maps"/"Petunjuk Arah", alamat konsisten di Footer, JSON-LD LocalBusiness dilengkapi streetAddress + geo coordinates (Claude Code)
 - [ ] Konfirmasi status repo remote & sinkronkan (Gemini Antigravity)
 - [ ] Push seluruh kode ke `website-d-ajiks-coffee-and-billiard` (Gemini Antigravity)
 - [ ] Deploy pertama ke Vercel (Gemini Antigravity)

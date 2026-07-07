@@ -1,6 +1,7 @@
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { LocationMap } from "@/components/ui/LocationMap";
 import { business, waLink } from "@/lib/constants";
 
 export function LocationCta() {
@@ -25,7 +26,7 @@ export function LocationCta() {
         <Reveal delay={200}>
           <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-ivory/65">
             <span className="flex items-center gap-2">
-              <MapPin size={16} className="text-gold" /> {business.city}, Indonesia
+              <MapPin size={16} className="text-gold" /> {business.address}
             </span>
             <span className="flex items-center gap-2">
               <Clock size={16} className="text-gold" /> {business.hours[0].time} Setiap Hari
@@ -33,13 +34,31 @@ export function LocationCta() {
           </div>
         </Reveal>
         <Reveal delay={300}>
-          <Button
-            href={waLink("Halo D'Ajiks, saya ingin tanya-tanya dulu.")}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chat via WhatsApp
-          </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              href={waLink("Halo D'Ajiks, saya ingin tanya-tanya dulu.")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chat via WhatsApp
+            </Button>
+            <Button
+              href={business.location.directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outline"
+              className="group"
+            >
+              <Navigation size={16} className="transition-transform duration-300 group-hover:-translate-y-0.5" />
+              Buka di Google Maps
+            </Button>
+          </div>
+        </Reveal>
+
+        <Reveal delay={400} className="w-full max-w-3xl">
+          <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-gold/20 shadow-card sm:aspect-[21/9]">
+            <LocationMap />
+          </div>
         </Reveal>
       </div>
     </section>

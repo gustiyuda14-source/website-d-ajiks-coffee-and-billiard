@@ -40,8 +40,16 @@ const jsonLd = {
   telephone: `+${business.whatsapp.waNumber}`,
   address: {
     "@type": "PostalAddress",
+    streetAddress: business.address,
     addressLocality: business.city,
+    addressRegion: "Sulawesi Tenggara",
+    postalCode: "90116",
     addressCountry: "ID",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: business.location.lat,
+    longitude: business.location.lng,
   },
   sameAs: [business.social.instagram, business.social.tiktok],
 };
