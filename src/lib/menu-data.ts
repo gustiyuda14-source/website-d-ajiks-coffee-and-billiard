@@ -1,6 +1,10 @@
 export type MenuItem = {
   name: string;
   price: number | string;
+  /** Foto produk asli (public path) — item dengan foto tampil sebagai photo card */
+  image?: string;
+  /** Label kecil di pojok foto, mis. "Signature" / "Best Seller" */
+  tag?: string;
 };
 
 export type MenuCategory = {
@@ -14,11 +18,26 @@ export const menuCategories: MenuCategory[] = [
     slug: "signature",
     title: "Signature Drinks",
     items: [
-      { name: "Kintamani Whisper", price: 28000 },
-      { name: "Lost In Lovina", price: 28000 },
+      {
+        name: "Kintamani Whisper",
+        price: 28000,
+        image: "/images/menu-items/kintamani-whisper.jpg",
+        tag: "Signature",
+      },
+      {
+        name: "Lost In Lovina",
+        price: 28000,
+        image: "/images/menu-items/lost-in-lovina.jpg",
+        tag: "Signature",
+      },
       { name: "Jembrana Breeze", price: 28000 },
       { name: "Dewata Goldnut", price: 28000 },
-      { name: "Matcha Strawberry Cloud", price: 28000 },
+      {
+        name: "Matcha Strawberry Cloud",
+        price: 28000,
+        image: "/images/menu-items/matcha-strawberry-cloud.jpg",
+        tag: "Signature",
+      },
       { name: "Golden Uluwatu", price: 28000 },
     ],
   },
@@ -31,7 +50,11 @@ export const menuCategories: MenuCategory[] = [
       { name: "Manual Brew / V60 (Hot/Cold)", price: "30.000 / 35.000" },
       { name: "Mochacinno (Hot/Cold)", price: "26.000 / 28.000" },
       { name: "Hot Kopi Susu", price: 16000 },
-      { name: "Americano (Hot/Cold)", price: "23.000 / 25.000" },
+      {
+        name: "Americano (Hot/Cold)",
+        price: "23.000 / 25.000",
+        image: "/images/menu-items/americano.jpg",
+      },
       { name: "Americano Honeyberry", price: 26000 },
       { name: "Americano Segaraningberry", price: 26000 },
       { name: "Americano Segara Spark", price: 26000 },
@@ -44,8 +67,17 @@ export const menuCategories: MenuCategory[] = [
       { name: "Aren", price: 24000 },
       { name: "Pandan", price: 26000 },
       { name: "Caramel", price: 26000 },
-      { name: "Vanilla Latte", price: 26000 },
-      { name: "Tiramisu", price: 26000 },
+      {
+        name: "Vanilla Latte",
+        price: 26000,
+        image: "/images/menu-items/vanilla-latte.jpg",
+      },
+      {
+        name: "Tiramisu",
+        price: 26000,
+        image: "/images/menu-items/tiramisu.jpg",
+        tag: "Best Seller",
+      },
       { name: "Green Banana", price: 26000 },
     ],
   },
@@ -53,8 +85,16 @@ export const menuCategories: MenuCategory[] = [
     slug: "non-coffee",
     title: "Non Coffee",
     items: [
-      { name: "Chocolate", price: 23000 },
-      { name: "Matcha", price: 25000 },
+      {
+        name: "Chocolate",
+        price: 23000,
+        image: "/images/menu-items/chocolate.jpg",
+      },
+      {
+        name: "Matcha",
+        price: 25000,
+        image: "/images/menu-items/matcha.jpg",
+      },
       { name: "Red Velvet", price: 23000 },
       { name: "Lotus", price: 28000 },
       { name: "Lychee Tea", price: 20000 },
@@ -66,10 +106,23 @@ export const menuCategories: MenuCategory[] = [
     slug: "main-course",
     title: "Main Course",
     items: [
-      { name: "Nasi Goreng D'Ajiks", price: 25000 },
+      {
+        name: "Nasi Goreng D'Ajiks",
+        price: 25000,
+        image: "/images/menu-items/action-nasi-goreng.jpg",
+        tag: "Best Seller",
+      },
       { name: "Nasi Goreng Tuna Asap", price: 27000 },
-      { name: "Bakso Ayam", price: 27000 },
-      { name: "Bandeng Crispy", price: 35000 },
+      {
+        name: "Bakso Ayam",
+        price: 27000,
+        image: "/images/menu-items/bakso-ayam.jpg",
+      },
+      {
+        name: "Bandeng Crispy",
+        price: 35000,
+        image: "/images/menu-items/bandeng-crispy.jpg",
+      },
       { name: "Nasi Jinggo D'Ajiks", price: 25000 },
       { name: "Ayam Betutu (Kampung)", price: 45000 },
       { name: "Ayam Betutu (Kota)", price: 30000 },
@@ -79,10 +132,26 @@ export const menuCategories: MenuCategory[] = [
     slug: "snack",
     title: "Snack",
     items: [
-      { name: "Risol Mayo / pcs", price: 6000 },
-      { name: "Ubi Goreng", price: 20000 },
-      { name: "Pisang Goreng", price: 20000 },
-      { name: "Pisang Goreng Keju/Coklat", price: 25000 },
+      {
+        name: "Risol Mayo / pcs",
+        price: 6000,
+        image: "/images/menu-items/action-risol.jpg",
+      },
+      {
+        name: "Ubi Goreng",
+        price: 20000,
+        image: "/images/menu-items/ubi-goreng.jpg",
+      },
+      {
+        name: "Pisang Goreng",
+        price: 20000,
+        image: "/images/menu-items/action-pisang-goreng.jpg",
+      },
+      {
+        name: "Pisang Goreng Keju/Coklat",
+        price: 25000,
+        image: "/images/menu-items/pisang-goreng-topping.jpg",
+      },
       { name: "Kerupuk Pangsit", price: 22000 },
       { name: "Kentang Goreng", price: 20000 },
     ],

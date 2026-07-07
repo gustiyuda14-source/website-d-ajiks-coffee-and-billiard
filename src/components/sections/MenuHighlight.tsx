@@ -11,21 +11,45 @@ export function MenuHighlight() {
     <section className="relative overflow-hidden bg-gradient-to-b from-forest-deep via-forest-green/15 to-forest-deep py-28">
       <div className="container-page grid gap-14 md:grid-cols-2 md:items-center">
         <Reveal>
-          <div className="relative">
-            {/* Offset gold frame behind the photo */}
+          {/* Fanned trio of signature drink photos — straightens on hover */}
+          <div className="group relative mx-auto aspect-[4/5] w-full max-w-md">
             <div
               className="absolute -inset-3 translate-x-4 translate-y-4 rounded-2xl border border-gold/25"
               aria-hidden
             />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-gold/15 shadow-card">
-              <Image
-                src="/images/products/coffee-cup-branding.jpg"
-                alt="Kopi D'Ajiks dengan branding emas"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover transition-transform duration-700 ease-out-expo hover:scale-[1.04]"
-              />
-            </div>
+            {[
+              {
+                src: "/images/menu-items/lost-in-lovina.jpg",
+                alt: "Lost In Lovina — signature drink D'Ajiks",
+                className:
+                  "left-0 top-6 w-3/5 -rotate-6 group-hover:-rotate-3 group-hover:-translate-x-1",
+              },
+              {
+                src: "/images/menu-items/matcha-strawberry-cloud.jpg",
+                alt: "Matcha Strawberry Cloud — signature drink D'Ajiks",
+                className:
+                  "right-0 top-0 w-3/5 rotate-6 group-hover:rotate-3 group-hover:translate-x-1",
+              },
+              {
+                src: "/images/menu-items/kintamani-whisper.jpg",
+                alt: "Kintamani Whisper — signature drink D'Ajiks",
+                className:
+                  "bottom-0 left-1/2 w-2/3 -translate-x-1/2 rotate-1 group-hover:rotate-0 group-hover:-translate-y-1",
+              },
+            ].map((photo) => (
+              <div
+                key={photo.src}
+                className={`absolute aspect-[3/4] overflow-hidden rounded-2xl border border-gold/20 shadow-card transition-transform duration-700 ease-out-expo ${photo.className}`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 66vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </Reveal>
 

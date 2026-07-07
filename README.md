@@ -73,6 +73,7 @@ public/
     ambiance/             # foto interior/venue asli (hero, dining, billiard, crew)
     products/             # foto kopi & produk literan
     menu/                 # scan papan menu asli (referensi/unduhan)
+    menu-items/           # foto produk per item menu (product shot + action shot), dipakai photo card di /menu
     promo/                # render dish promosi (11 gambar)
   brand/
     logo-light.jpg        # logo hitam-di-putih asli
@@ -158,6 +159,7 @@ Dua agen bekerja di proyek yang sama dengan batas tanggung jawab yang tegas, sup
 - [x] Font Cinzel + Jost terpasang sebagai identitas tipografi utama (Claude Code)
 - [x] `npm run build` sukses, diverifikasi visual di browser headless — tidak ada console error (Claude Code)
 - [x] Logo emas asli terpasang di Navbar (badge ikon), Footer (lockup lengkap), dan favicon (Claude Code)
+- [x] 15 foto produk (product shot + action shot) dioptimasi ke `public/images/menu-items/`, menu jadi hybrid photo card + daftar klasik, kolase kipas signature di Home (Claude Code)
 - [ ] Lengkapi alamat & embed peta di halaman Contact — alamat pasti belum tersedia (Claude Code)
 - [ ] Konfirmasi status repo remote & sinkronkan (Gemini Antigravity)
 - [ ] Push seluruh kode ke `website-d-ajiks-coffee-and-billiard` (Gemini Antigravity)
