@@ -160,6 +160,7 @@ Dua agen bekerja di proyek yang sama dengan batas tanggung jawab yang tegas, sup
 - [x] `npm run build` sukses, diverifikasi visual di browser headless — tidak ada console error (Claude Code)
 - [x] Logo emas asli terpasang di Navbar (badge ikon), Footer (lockup lengkap), dan favicon (Claude Code)
 - [x] 15 foto produk (product shot + action shot) dioptimasi ke `public/images/menu-items/`, menu jadi hybrid photo card + daftar klasik, kolase kipas signature di Home (Claude Code)
+- [x] Lightbox foto menu (klik kartu → foto penuh, tutup via backdrop/X/ESC), marquee brand ticker di Home, emblem Grab asli di section GrabFood CTA (`public/images/partners/`) (Claude Code)
 - [ ] Lengkapi alamat & embed peta di halaman Contact — alamat pasti belum tersedia (Claude Code)
 - [ ] Konfirmasi status repo remote & sinkronkan (Gemini Antigravity)
 - [ ] Push seluruh kode ke `website-d-ajiks-coffee-and-billiard` (Gemini Antigravity)

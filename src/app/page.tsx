@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { MarqueeStrip } from "@/components/sections/MarqueeStrip";
 import { AmbianceGallery } from "@/components/sections/AmbianceGallery";
 import { MenuHighlight } from "@/components/sections/MenuHighlight";
 import { GrabFoodCta } from "@/components/sections/GrabFoodCta";
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <MarqueeStrip />
       <AmbianceGallery />
       <MenuHighlight />
       <GrabFoodCta />

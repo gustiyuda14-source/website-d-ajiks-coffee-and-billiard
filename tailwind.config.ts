@@ -58,6 +58,10 @@ const config: Config = {
           "0%": { transform: "scale(1)", opacity: "0.45" },
           "100%": { transform: "scale(1.7)", opacity: "0" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         kenburns: "kenburns 18s ease-out both",
@@ -65,6 +69,7 @@ const config: Config = {
         "fade-in": "fade-in 1.2s ease-out both",
         "scroll-hint": "scroll-hint 2.2s cubic-bezier(0.65,0,0.35,1) infinite",
         "pulse-ring": "pulse-ring 2.4s cubic-bezier(0.16,1,0.3,1) infinite",
+        marquee: "marquee 32s linear infinite",
       },
     },
   },

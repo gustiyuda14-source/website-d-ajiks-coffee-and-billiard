@@ -1,4 +1,4 @@
-import { Bike } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { business } from "@/lib/constants";
@@ -14,9 +14,15 @@ export function GrabFoodCta() {
               aria-hidden
             />
             <div className="relative flex flex-col items-center gap-6">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/5 text-gold">
-                <Bike size={24} />
-              </span>
+              <div className="group relative w-52 overflow-hidden rounded-2xl border border-gold/20 shadow-card transition-all duration-500 ease-out-expo hover:-translate-y-1 hover:border-gold/50 sm:w-64">
+                <Image
+                  src="/images/partners/grab-emblem.jpg"
+                  alt="Grab — pesan antar D'Ajiks lewat GrabFood"
+                  width={783}
+                  height={391}
+                  className="h-auto w-full transition-transform duration-700 ease-out-expo group-hover:scale-105"
+                />
+              </div>
               <h2 className="heading-lg max-w-2xl">
                 Nggak Sempat Mampir?{" "}
                 <span className="text-gold-gradient">Pesan Lewat GrabFood</span>
